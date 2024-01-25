@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+  background-color: #f0f6f8;
+  text-align: center;
+}
+
+.flashcards-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  @media (min-width: 668px) and (max-width: 1023px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+h1 {
+    font-size: 36px;
+    color: #121C84;
+    text-transform: uppercase;
+}
+
+.maincontainer {
+  position: relative;
+  width: 250px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.5s ease;
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-image: linear-gradient(to bottom right, #121C84, #8278DA);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #ffffff;
+  border: 2px #07034b solid ;
+  transform: rotateY(180deg);
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+img {
+    width: 120px;
+}
