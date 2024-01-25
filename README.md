@@ -1,7 +1,7 @@
 # Flashcards with CSS Flip card effect
 
 ## Intro
-This is day 21 of my 30-day coding challenge. The projects includes: HTML and CSS.
+This is day 22 of my 30-day coding challenge. The projects includes: HTML and CSS.
 
 ## Idea
 I wanted to make flashcards effect with some English vocabulary which I didn't know before. 
